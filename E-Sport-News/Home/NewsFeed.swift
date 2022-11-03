@@ -8,7 +8,13 @@
 import Foundation
 
 struct NewsFeed: Codable {
-    var title: String?
+    var titel: String?
     var description: String?
-    var thumbnail: String?
+    var thumnail: String?
+    
+}
+
+
+struct News: Codable {
+    var news: Array<NewsFeed>?
 }
