@@ -163,7 +163,7 @@
         <!--Item-->
         <scene sceneID="2hS-O9-mlp">
             <objects>
-                <viewController id="G05-nq-P1I" sceneMemberID="viewController">
+                <viewController id="G05-nq-P1I" customClass="YoutubeViewController" customModule="E_Sport_News" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lnR-ce-Rrh">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -172,7 +172,7 @@
                                 <rect key="frame" x="0.0" y="91" width="390" height="670"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="youtubecell" id="ev3-ZB-CSX">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="youtubecell" id="ev3-ZB-CSX" customClass="YoutubeTableViewCell" customModule="E_Sport_News" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="390" height="155.33332824707031"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ev3-ZB-CSX" id="f2u-vf-ryN">
