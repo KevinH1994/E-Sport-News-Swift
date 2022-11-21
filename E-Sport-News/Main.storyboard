@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hBb-ZM-kJm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G05-nq-P1I">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -115,32 +115,53 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="homecell" id="fJe-4M-Ssq" customClass="HomeTableViewCell" customModule="E_Sport_News" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="homecell" rowHeight="118" id="fJe-4M-Ssq" customClass="HomeTableViewCell" customModule="E_Sport_News" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="390" height="118"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fJe-4M-Ssq" id="wjV-l8-xXi">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="118"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gp6-fj-0i2">
-                                            <rect key="frame" x="20" y="0.0" width="42" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gp6-fj-0i2">
+                                            <rect key="frame" x="20" y="0.0" width="350" height="46"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="46" id="9NO-sB-hTo"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Hy-dd-UPa">
-                                            <rect key="frame" x="20" y="22" width="42" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Hy-dd-UPa">
+                                            <rect key="frame" x="20" y="47" width="350" height="20.333333333333329"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20.329999999999998" id="rRD-rc-09G"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Trymacs-Immortal-720x394" translatesAutoresizingMaskIntoConstraints="NO" id="86O-1b-G3Q">
+                                            <rect key="frame" x="150" y="0.0" width="240" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="128" id="JlQ-1y-3en"/>
+                                                <constraint firstAttribute="width" constant="240" id="VZe-2i-erl"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="2Hy-dd-UPa" firstAttribute="top" secondItem="Gp6-fj-0i2" secondAttribute="bottom" constant="1" id="5dN-v0-DsM"/>
                                         <constraint firstItem="2Hy-dd-UPa" firstAttribute="top" secondItem="Gp6-fj-0i2" secondAttribute="bottom" constant="1" id="AcZ-9Q-U8F"/>
+                                        <constraint firstItem="Gp6-fj-0i2" firstAttribute="top" secondItem="wjV-l8-xXi" secondAttribute="top" id="EZi-Wk-GXM"/>
                                         <constraint firstItem="Gp6-fj-0i2" firstAttribute="leading" secondItem="wjV-l8-xXi" secondAttribute="leading" constant="20" symbolic="YES" id="IcF-mV-3m1"/>
+                                        <constraint firstAttribute="trailing" secondItem="Gp6-fj-0i2" secondAttribute="trailing" constant="20" symbolic="YES" id="MGg-am-wbr"/>
                                         <constraint firstItem="Gp6-fj-0i2" firstAttribute="top" secondItem="wjV-l8-xXi" secondAttribute="top" id="QZv-Ay-cGh"/>
+                                        <constraint firstAttribute="trailing" secondItem="86O-1b-G3Q" secondAttribute="trailing" id="Xnh-gd-0bV"/>
+                                        <constraint firstItem="2Hy-dd-UPa" firstAttribute="top" secondItem="Gp6-fj-0i2" secondAttribute="bottom" constant="1" id="dwb-84-Dop"/>
                                         <constraint firstItem="2Hy-dd-UPa" firstAttribute="leading" secondItem="wjV-l8-xXi" secondAttribute="leading" constant="20" symbolic="YES" id="gle-8m-1Ci"/>
+                                        <constraint firstItem="2Hy-dd-UPa" firstAttribute="leading" secondItem="wjV-l8-xXi" secondAttribute="leadingMargin" id="oZh-1t-Ei9"/>
+                                        <constraint firstItem="86O-1b-G3Q" firstAttribute="top" secondItem="wjV-l8-xXi" secondAttribute="top" id="pZl-fl-LnJ"/>
+                                        <constraint firstItem="2Hy-dd-UPa" firstAttribute="trailing" secondItem="wjV-l8-xXi" secondAttribute="trailingMargin" id="sdy-i4-Jrw"/>
+                                        <constraint firstItem="Gp6-fj-0i2" firstAttribute="leading" secondItem="wjV-l8-xXi" secondAttribute="leading" constant="20" symbolic="YES" id="zmB-AH-3Sv"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -158,7 +179,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNc-nn-6v0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2275" y="799"/>
+            <point key="canvasLocation" x="2273.8461538461538" y="798.34123222748815"/>
         </scene>
         <!--Item-->
         <scene sceneID="2hS-O9-mlp">
@@ -168,30 +189,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Uds-Yh-Dqr">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="124" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Uds-Yh-Dqr">
                                 <rect key="frame" x="0.0" y="91" width="390" height="670"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="youtubecell" id="ev3-ZB-CSX" customClass="YoutubeTableViewCell" customModule="E_Sport_News" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="390" height="155.33332824707031"/>
+                                        <rect key="frame" x="0.0" y="50" width="390" height="124"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ev3-ZB-CSX" id="f2u-vf-ryN">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="155.33332824707031"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="124"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M5U-1C-EDZ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="120.33333333333333"/>
-                                                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="120" id="xY9-81-nYs"/>
-                                                    </constraints>
-                                                    <wkWebViewConfiguration key="configuration">
-                                                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                                        <wkPreferences key="preferences"/>
-                                                    </wkWebViewConfiguration>
-                                                </wkWebView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZ1-Vl-3az">
-                                                    <rect key="frame" x="20" y="120.33333333333331" width="350" height="24"/>
+                                                    <rect key="frame" x="20" y="89" width="350" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="24" id="JKT-yj-B7U"/>
                                                     </constraints>
@@ -199,17 +209,24 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a4m-Uk-P5z" customClass="YTPlayerView">
+                                                    <rect key="frame" x="59" y="0.0" width="240" height="124"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="M5U-1C-EDZ" firstAttribute="top" secondItem="f2u-vf-ryN" secondAttribute="top" id="0XQ-oo-0zq"/>
-                                                <constraint firstItem="VZ1-Vl-3az" firstAttribute="top" secondItem="M5U-1C-EDZ" secondAttribute="bottom" id="A80-jW-1gV"/>
-                                                <constraint firstItem="M5U-1C-EDZ" firstAttribute="leading" secondItem="f2u-vf-ryN" secondAttribute="leading" id="C8f-IC-4Ma"/>
-                                                <constraint firstAttribute="trailing" secondItem="M5U-1C-EDZ" secondAttribute="trailing" id="IOO-gQ-zxY"/>
+                                                <constraint firstItem="a4m-Uk-P5z" firstAttribute="top" secondItem="f2u-vf-ryN" secondAttribute="top" id="60u-Pc-qon"/>
+                                                <constraint firstAttribute="bottom" secondItem="a4m-Uk-P5z" secondAttribute="bottom" id="MBx-az-GPq"/>
                                                 <constraint firstItem="VZ1-Vl-3az" firstAttribute="leading" secondItem="f2u-vf-ryN" secondAttribute="leadingMargin" id="YcT-KD-va1"/>
+                                                <constraint firstAttribute="trailing" secondItem="a4m-Uk-P5z" secondAttribute="trailing" constant="91" id="Znp-Bh-Llc"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="VZ1-Vl-3az" secondAttribute="trailing" id="aHJ-c9-rxf"/>
+                                                <constraint firstItem="a4m-Uk-P5z" firstAttribute="leading" secondItem="f2u-vf-ryN" secondAttribute="leading" constant="59" id="bSj-GX-Let"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="VZ1-Vl-3az" secondAttribute="bottom" id="zeE-oR-Cqd"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ytView" destination="a4m-Uk-P5z" id="2hL-vX-twM"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -224,6 +241,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" image="video.square.fill" catalog="system" id="LkP-ug-Zpa"/>
+                    <connections>
+                        <outlet property="ytTV" destination="Uds-Yh-Dqr" id="QuT-gr-vow"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dMZ-9V-k8d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -241,7 +261,7 @@
                                 <rect key="frame" x="0.0" y="91" width="390" height="670"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="chatcell" id="QeF-iO-ibb">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="chatcell" id="QeF-iO-ibb" customClass="YoutubeTableViewCell" customModule="E_Sport_News" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="390" height="64.333335876464844"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QeF-iO-ibb" id="ur2-zx-1sD">
@@ -397,6 +417,7 @@
         <segue reference="gnJ-um-Sfv"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="Trymacs-Immortal-720x394" width="720" height="394"/>
         <image name="bubble.right.circle.fill" catalog="system" width="128" height="123"/>
         <image name="video.square.fill" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">

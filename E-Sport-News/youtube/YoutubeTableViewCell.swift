@@ -6,12 +6,21 @@
 //
 
 import UIKit
+import youtube_ios_player_helper
 
-class YoutubeTableViewCell: UITableViewCell {
+class YoutubeTableViewCell: UITableViewCell, YTPlayerViewDelegate {
+    
+    @IBOutlet weak var ytView: YTPlayerView!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+       
+     
+    }
+    
+    func playerViewDidBecomeReady(_ playerView: YTPlayerView){
+        playerView.playVideo()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

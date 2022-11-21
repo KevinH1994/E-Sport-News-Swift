@@ -9,7 +9,7 @@ import Foundation
 
 struct ApiYoutubeClient{
     
-let baseUrl = ""
+let baseUrl = "https://www.googleapis.com/youtube/v3/search?key=\(keyYT)&q=esport+news&type=videos&part=snippet"
     
     func fetchYoutube(completion: @escaping(YoutubeV3) -> Void){
         let urlString = baseUrl
@@ -23,13 +23,18 @@ let baseUrl = ""
             
             if error == nil && data != nil {
                 let decoder = JSONDecoder()
+                decoder.dateDecodingStrategy = .iso8601
+            
                 
                 do{
                     let youtube = try
+                    
                     decoder.decode(YoutubeV3.self,from: data!)
+                    
                     completion(youtube)
                 }catch{
-                    print("Error in JSON parsing")
+                    print(error)
+                    print("Error in YoutubeApi")
                 }
             }
             

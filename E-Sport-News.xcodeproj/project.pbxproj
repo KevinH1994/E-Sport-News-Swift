@@ -25,9 +25,9 @@
 		3CB6448A291D3AFC00DB9B7F /* youtubeFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB64489291D3AFC00DB9B7F /* youtubeFeed.swift */; };
 		3CB6448C291D3B8D00DB9B7F /* YoutubeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB6448B291D3B8D00DB9B7F /* YoutubeTableViewCell.swift */; };
 		3CB6448E291D3BA800DB9B7F /* YoutubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB6448D291D3BA800DB9B7F /* YoutubeViewController.swift */; };
-		3CB64491291D421700DB9B7F /* XCDYouTubeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3CB64490291D421700DB9B7F /* XCDYouTubeKit */; };
 		3CB64493291E891600DB9B7F /* ApiYoutube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB64492291E891600DB9B7F /* ApiYoutube.swift */; };
 		3CB64496291E929500DB9B7F /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB64495291E929500DB9B7F /* Keys.swift */; };
+		3CB64498292BDD0000DB9B7F /* TwitchApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB64497292BDD0000DB9B7F /* TwitchApi.swift */; };
 		3CE51F202915623A0038FE65 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3CE51F1F2915623A0038FE65 /* FirebaseAuth */; };
 		3CE51F222915623A0038FE65 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3CE51F212915623A0038FE65 /* FirebaseDatabaseSwift */; };
 		3CE51F242915623A0038FE65 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3CE51F232915623A0038FE65 /* FirebaseFirestoreSwift */; };
@@ -58,6 +58,7 @@
 		3CB6448D291D3BA800DB9B7F /* YoutubeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeViewController.swift; sourceTree = "<group>"; };
 		3CB64492291E891600DB9B7F /* ApiYoutube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiYoutube.swift; sourceTree = "<group>"; };
 		3CB64495291E929500DB9B7F /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		3CB64497292BDD0000DB9B7F /* TwitchApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchApi.swift; sourceTree = "<group>"; };
 		6803AC0BFCCC6665B29C5C14 /* Pods_E_Sport_News.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_E_Sport_News.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7363CE7A34C6FD557F055874 /* Pods-E-Sport-News.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-Sport-News.release.xcconfig"; path = "Target Support Files/Pods-E-Sport-News/Pods-E-Sport-News.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,7 +71,6 @@
 				3CE51F262915623A0038FE65 /* FirebaseMessaging in Frameworks */,
 				3CE51F222915623A0038FE65 /* FirebaseDatabaseSwift in Frameworks */,
 				3CE51F202915623A0038FE65 /* FirebaseAuth in Frameworks */,
-				3CB64491291D421700DB9B7F /* XCDYouTubeKit in Frameworks */,
 				3CE51F282915623A0038FE65 /* FirebaseStorage in Frameworks */,
 				3CE51F242915623A0038FE65 /* FirebaseFirestoreSwift in Frameworks */,
 				3501A679BC46B4335E56EB1A /* Pods_E_Sport_News.framework in Frameworks */,
@@ -135,6 +135,7 @@
 			children = (
 				3C2F768E2914016900E4DA96 /* ApiNews.swift */,
 				3CB64492291E891600DB9B7F /* ApiYoutube.swift */,
+				3CB64497292BDD0000DB9B7F /* TwitchApi.swift */,
 			);
 			path = "Api´s";
 			sourceTree = "<group>";
@@ -209,6 +210,7 @@
 				3C11BA3B28F05FE200D2AC94 /* Sources */,
 				3C11BA3C28F05FE200D2AC94 /* Frameworks */,
 				3C11BA3D28F05FE200D2AC94 /* Resources */,
+				7F673544902F6F45E5E1F76F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -221,7 +223,6 @@
 				3CE51F232915623A0038FE65 /* FirebaseFirestoreSwift */,
 				3CE51F252915623A0038FE65 /* FirebaseMessaging */,
 				3CE51F272915623A0038FE65 /* FirebaseStorage */,
-				3CB64490291D421700DB9B7F /* XCDYouTubeKit */,
 			);
 			productName = "E-Sport-News";
 			productReference = 3C11BA3F28F05FE200D2AC94 /* E-Sport-News.app */;
@@ -253,7 +254,6 @@
 			mainGroup = 3C11BA3628F05FE200D2AC94;
 			packageReferences = (
 				3CE51F1E2915623A0038FE65 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				3CB6448F291D421700DB9B7F /* XCRemoteSwiftPackageReference "XCDYouTubeKit" */,
 			);
 			productRefGroup = 3C11BA4028F05FE200D2AC94 /* Products */;
 			projectDirPath = "";
@@ -301,6 +301,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		7F673544902F6F45E5E1F76F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-E-Sport-News/Pods-E-Sport-News-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-E-Sport-News/Pods-E-Sport-News-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-E-Sport-News/Pods-E-Sport-News-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -315,6 +332,7 @@
 				3CB64496291E929500DB9B7F /* Keys.swift in Sources */,
 				3C11BA4528F05FE200D2AC94 /* SceneDelegate.swift in Sources */,
 				3CB6448E291D3BA800DB9B7F /* YoutubeViewController.swift in Sources */,
+				3CB64498292BDD0000DB9B7F /* TwitchApi.swift in Sources */,
 				3CB64493291E891600DB9B7F /* ApiYoutube.swift in Sources */,
 				3C1841FF29153E1600A716EC /* LoginVC.swift in Sources */,
 				3C6DDDF628FEE4A7000D073F /* HomeTableViewController.swift in Sources */,
@@ -534,14 +552,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		3CB6448F291D421700DB9B7F /* XCRemoteSwiftPackageReference "XCDYouTubeKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/0xced/XCDYouTubeKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
 		3CE51F1E2915623A0038FE65 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -553,11 +563,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3CB64490291D421700DB9B7F /* XCDYouTubeKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3CB6448F291D421700DB9B7F /* XCRemoteSwiftPackageReference "XCDYouTubeKit" */;
-			productName = XCDYouTubeKit;
-		};
 		3CE51F1F2915623A0038FE65 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3CE51F1E2915623A0038FE65 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

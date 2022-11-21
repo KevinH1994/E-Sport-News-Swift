@@ -1,17 +1,16 @@
 //
-//  ApiNews.swift
+//  TwitchApi.swift
 //  E-Sport-News
 //
-//  Created by Kevin Hering on 03.11.22.
+//  Created by Kevin Hering on 21.11.22.
 //
 
 import Foundation
 
-struct ApiNewsClient{
-    let baseUrl = "https://public.syntax-institut.de/apps/batch1/KevinHering/data.json"
+struct ApiTwitchClient {
+    let baseUrl = ""
     
-    func fetchNews(completion: @escaping(News) -> Void){
-        
+    func fetchTwitch(completion : @escaping ()-> Void ) {
         let urlString = baseUrl
         let url = URL(string: urlString)
         guard url != nil else {return}
@@ -22,13 +21,14 @@ struct ApiNewsClient{
             data, response, error in
             
             if error == nil && data != nil{
-                let decoder = JSONDecoder()
+                let decooder = JSONEncoder()
                 
                 do{
-                    let newsFeed = try decoder.decode(News.self, from: data!)
-                    completion(newsFeed)
+                    let twitchFeed = try
+                    decooder.decode("" , from: data!)
+                    completion()
                 }catch{
-                    print("Error in News")
+                    print("Error in Twitch")
                 }
             }
         }
