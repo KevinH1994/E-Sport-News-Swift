@@ -61,7 +61,9 @@ class YoutubeViewController: UIViewController,UITableViewDelegate, UITableViewDa
         var cell = tableView.dequeueReusableCell(withIdentifier: "youtubecell", for: indexPath) as! YoutubeTableViewCell
         if ytList != nil {
             if let videoId = ytList?.items[indexPath.row].id.videoID{
-                cell.ytView.load(withVideoId: videoId)
+                DispatchQueue.main.async {
+                    cell.ytView.load(withVideoId: videoId)
+                }
 
             }else{
                 cell.isHidden = true

@@ -47,6 +47,9 @@ class HomeTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -58,8 +61,23 @@ class HomeTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "homecell", for: indexPath) as! HomeTableViewCell
        
         let article = self.articles[indexPath.row]
-        cell.title.text = article.titel ?? "Titel"
-        cell.discription.text = article.description ?? "Discription"
+        DispatchQueue.main.async {
+            cell.title.text = article.titel ?? "Titel"
+            cell.discription.text = article.description ?? "Discription"}
+        DispatchQueue.global(qos: .background).async{
+            
+        
+            
+            if let data = try? Data(contentsOf: URL(string: article.thumnail ?? "" )!){
+                DispatchQueue.main.async {
+                    cell.bild.image = UIImage(data: data)
+                }
+                    
+                
+                
+            }
+        }
+
         
         
 

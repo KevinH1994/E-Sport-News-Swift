@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>648784431855-1i267e8u7qdrdv87p6hfnp1cqbdufv7u.apps.googleusercontent.com</string>
+	<string>648784431855-fjt2o8rp3q78q92708ubbbqjncssht9p.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.648784431855-1i267e8u7qdrdv87p6hfnp1cqbdufv7u</string>
+	<string>com.googleusercontent.apps.648784431855-fjt2o8rp3q78q92708ubbbqjncssht9p</string>
 	<key>API_KEY</key>
 	<string>AIzaSyDO7LccqyXqmTuXObVvdVoQhl27W3r8uyU</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>E-Sport-News</string>
+	<string>de.KevinHering.E-Sport-News</string>
 	<key>PROJECT_ID</key>
 	<string>e-sport-news-swift</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:648784431855:ios:97ecacdd31e35f69aea91a</string>
+	<string>1:648784431855:ios:44d6303e3c3dc709aea91a</string>
 </dict>
 </plist>

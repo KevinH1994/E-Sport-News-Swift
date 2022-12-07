@@ -25,7 +25,7 @@ struct ApiTwitchClient {
                 
                 do{
                     let twitchFeed = try
-                    decooder.decode("" , from: data!)
+                  //  decooder.decode("" , from: data!)
                     completion()
                 }catch{
                     print("Error in Twitch")
