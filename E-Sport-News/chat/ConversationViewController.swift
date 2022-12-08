@@ -115,12 +115,12 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("hallo2")
-        let conversation = conversationsList[indexPath.row]
-        let conversationDocument = conversationsDocumentQuerySnapshots[indexPath.row]
-        let user = conversation.otherParticipant
-        let chatVC = ChatViewController(with: user, conversationDocument: conversationDocument)
-        chatVC.title = "\(user.firstName) \(user.lastName)"
-        navigationController?.pushViewController(chatVC, animated: true)
+//        let conversation = conversationsList[indexPath.row]
+//        let conversationDocument = conversationsDocumentQuerySnapshots[indexPath.row]
+//        let user = conversation.otherParticipant
+//        let chatVC = ChatViewController(with: user, conversationDocument: conversationDocument)
+//        chatVC.title = "\(user.firstName) \(user.lastName)"
+//        navigationController?.pushViewController(chatVC, animated: true)
     }
     
 

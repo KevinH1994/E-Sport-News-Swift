@@ -35,7 +35,7 @@ class YoutubeViewController: UIViewController,UITableViewDelegate, UITableViewDa
         
     }
     
-    
+    //MARK: Hier werden einzelene Video´s raus gefiltert die nur eine Video Id habe und keine URL haben.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var count = 0
         var i = 0
@@ -56,8 +56,8 @@ class YoutubeViewController: UIViewController,UITableViewDelegate, UITableViewDa
         return count
         
     }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    //MARK: Hier werden Youtube Videos in die Celle Geladen.
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: "youtubecell", for: indexPath) as! YoutubeTableViewCell
         if ytList != nil {
             if let videoId = ytList?.items[indexPath.row].id.videoID{

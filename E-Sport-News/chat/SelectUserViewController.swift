@@ -31,10 +31,20 @@ class SelectUserViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("hallo123")
+        let uiConfig = ATCChatUIConfiguration(primaryColor: UIColor(hexString: "#0084ff"),
+                                                      secondaryColor: UIColor(hexString: "#f0f0f0"),
+                                                      inputTextViewBgColor: UIColor(hexString: "#f4f4f6"),
+                                                      inputTextViewTextColor: .black,
+                                                      inputPlaceholderTextColor: UIColor(hexString: "#979797"))
         let user = users[indexPath.row]
-        let chatVC = ChatViewController(with: user, conversationDocument: nil)
-        chatVC.title = "\(user.firstName) \(user.lastName)"
-        navigationController?.pushViewController(chatVC, animated: true)
+        let channel = ATCChatChannel(id: user.uid , name: user.firstName)
+        let viewer = ATCUser(firstName: user.firstName, lastName: user.lastName)
+        let chatVC = ATCChatThreadViewController(user: viewer, channel: channel, uiConfig: uiConfig)
+        self.navigationController?.pushViewController(chatVC, animated: true)
+        
+//        let chatVC = ChatViewController(with: user, conversationDocument: nil)
+//        chatVC.title = "\(user.firstName) \(user.lastName)"
+//        navigationController?.pushViewController(chatVC, animated: true)
     }
     
 
